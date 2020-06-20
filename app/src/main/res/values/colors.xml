@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#212121</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#757575</color>
+    <color name="pink">#D81B60</color>
+    <color name="colorTextHint">#ECECEC</color>
+    <color name="Biru">#0B122C</color>
+    <color name="BiruAwan">#03DAC5</color>
+    <color name="TextHint">#BDBDBD</color>
+    <color name="SelectedMenu">#408DED</color>
+    <color name="Background">#F2F5FE</color>
+    <color name="BottomSheetDialog1">#1976D2</color>
+    <color name="BottomSheetDialog2">#FF5252</color>
+</resources>

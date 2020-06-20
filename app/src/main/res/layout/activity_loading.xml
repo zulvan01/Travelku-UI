@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".LoadingActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        app:lottie_rawRes="@raw/corona"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/about_destination"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/tourism_is_a_trip_made_for_recreation_or_vacation_and_also_preparations_are_made_for_this_activity"
+        android:textColor="#757575"
+        android:textSize="14sp"
+        android:textStyle="italic"/>
+
+    <Button
+        android:id="@+id/buttonNotif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/background_for_sign_up_button"
+        android:text="@string/nyalakan_notifikasi_kembali" />
+
+</LinearLayout>

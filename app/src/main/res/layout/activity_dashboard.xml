@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".DashboardActivity">
+
+    <ImageView
+        android:id="@+id/imageHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_180sdp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/destination"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageAirPlaneOutline"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/round_outline"
+        android:contentDescription="@string/app_name"
+        android:padding="@dimen/_4sdp"
+        android:src="@drawable/ic_airplane"
+        android:tint="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:text="@string/zulvan_z"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageAirPlaneOutline"
+        app:layout_constraintStart_toEndOf="@+id/imageAirPlaneOutline"
+        app:layout_constraintTop_toTopOf="@+id/imageAirPlaneOutline"/>
+
+    <TextView
+        android:id="@+id/textFlying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:shadowColor="@color/colorPrimaryDark"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="10"
+        android:text="@string/flying"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_24ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageHeader"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/textTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:shadowColor="@color/colorPrimaryDark"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="10"
+        android:text="@string/to"
+        android:textSize="@dimen/_24ssp"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/textFlying"
+        app:layout_constraintStart_toEndOf="@+id/textFlying"
+        app:layout_constraintTop_toTopOf="@+id/textFlying"/>
+
+    <TextView
+        android:id="@+id/textWhereAreYou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="@color/colorPrimaryDark"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="10"
+        android:text="@string/where_are_you"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_24ssp"
+        app:layout_constraintBottom_toTopOf="@+id/textFlying"
+        app:layout_constraintStart_toStartOf="@+id/textFlying"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageHeader"
+        app:layout_constraintTop_toBottomOf="@+id/imageHeader">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/_8sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_location"
+                android:tint="@color/TextHint"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:background="@null"
+                android:hint="@string/enter_your_destination"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/colorTextHint"
+                android:textSize="@dimen/_13ssp"/>
+
+
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageRightArrow"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_keyboard_arrow_right"
+        android:tint="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardSearch"/>
+
+    <TextView
+        android:id="@+id/textAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/all"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageRightArrow"
+        app:layout_constraintEnd_toStartOf="@+id/imageRightArrow"
+        app:layout_constraintTop_toTopOf="@+id/imageRightArrow"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:text="@string/upcoming_trips"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageRightArrow"
+        app:layout_constraintStart_toEndOf="@+id/textAll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageRightArrow"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardUpcomingTrips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@+id/imageRightArrow">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:paddingTop="@dimen/_6sdp"
+            android:paddingBottom="@dimen/_6sdp">
+
+            <TextView
+                android:id="@+id/textTripDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_25_mei_12_30"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/textLas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="@string/las"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textTripDate"/>
+
+            <TextView
+                android:id="@+id/textLasVegas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/las_vegas"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textLas"/>
+
+            <TextView
+                android:id="@+id/textTripTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_15_30"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/textSfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="@string/sfo"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textTripDate"/>
+
+            <TextView
+                android:id="@+id/textSanfrancisco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/san_francisco"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textLas"/>
+
+            <View
+                android:id="@+id/viewLine"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="2dp"
+                android:background="@color/TextHint"
+                app:layout_constraintBottom_toBottomOf="@+id/textSfo"
+                app:layout_constraintEnd_toStartOf="@+id/textSfo"
+                app:layout_constraintStart_toEndOf="@+id/textLas"
+                app:layout_constraintTop_toTopOf="@+id/textLas"/>
+
+            <ImageView
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:contentDescription="@string/app_name"
+                android:rotation="90"
+                android:src="@drawable/ic_airplane"
+                android:tint="@color/colorPrimaryDark"
+                app:layout_constraintBottom_toBottomOf="@+id/viewLine"
+                app:layout_constraintEnd_toEndOf="@+id/viewLine"
+                app:layout_constraintStart_toStartOf="@+id/viewLine"
+                app:layout_constraintTop_toTopOf="@+id/viewLine"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textPopular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:text="@string/popular"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/cardUpcomingTrips" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toTopOf="@+id/bottombar"
+            app:layout_constraintTop_toBottomOf="@+id/textPopular">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/Indonesia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/indonesia"
+                        app:riv_corner_radius="@dimen/_8sdp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:padding="@dimen/_8sdp"
+                        android:shadowColor="@color/colorPrimaryDark"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="10"
+                        android:text="@string/indonesia"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/Singapura"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_height="match_parent">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/singapura"
+                        app:riv_corner_radius="@dimen/_8sdp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:padding="@dimen/_8sdp"
+                        android:shadowColor="@color/colorPrimaryDark"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="10"
+                        android:text="@string/singapura"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/New_York"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_height="match_parent">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/newyork"
+                        app:riv_corner_radius="@dimen/_8sdp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:padding="@dimen/_8sdp"
+                        android:shadowColor="@color/colorPrimaryDark"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="10"
+                        android:text="@string/new_york"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/Australia"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_height="match_parent">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/australia"
+                        app:riv_corner_radius="@dimen/_8sdp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:padding="@dimen/_8sdp"
+                        android:shadowColor="@color/colorPrimaryDark"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="10"
+                        android:text="@string/australia"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/Belanda"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_height="match_parent">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/belanda"
+                        app:riv_corner_radius="@dimen/_8sdp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:padding="@dimen/_8sdp"
+                        android:shadowColor="@color/colorPrimaryDark"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="10"
+                        android:text="@string/belanda"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold"/>
+                </FrameLayout>
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+
+
+    <me.ibrahimsn.lib.SmoothBottomBar
+        android:id="@+id/bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:backgroundColor="@color/Background"
+        app:iconSize="@dimen/_22sdp"
+        app:iconTint="@color/colorPrimaryDark"
+        app:iconTintActive="@android:color/white"
+        app:indicatorColor="@color/SelectedMenu"
+        app:indicatorRadius="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_navigation"
+        app:textColor="@android:color/white"
+        app:textSize="@dimen/_12ssp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
